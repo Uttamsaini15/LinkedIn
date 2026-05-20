@@ -5,7 +5,7 @@
   "license": "ISC",
   "author": "Uttam Saini",
   "type": "module",
-  "main": "index.js",    
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"
   },
@@ -20,6 +20,6 @@
     "mongoose": "^8.12.1",
     "multer": "^1.4.5-lts.2",
     "nodemon": "^3.1.9",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.3"
   }
 }
