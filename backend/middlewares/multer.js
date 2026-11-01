@@ -1,18 +1,15 @@
 import multer from "multer"
-import os from "os"
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, os.tmpdir())
+
+
+let storage=multer.diskStorage({
+    destination:(req,file,cb)=>{
+        cb(null,"./public")
     },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + "-" + file.originalname)
+    filename:(req,file,cb)=>{
+        cb(null,file.originalname)
     }
 })
 
-const upload = multer({
-    storage,
-    limits: { fileSize: 4 * 1024 * 1024 } // 4 MB
-})
-
+const upload=multer({storage})
 export default upload
